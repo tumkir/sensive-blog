@@ -71,14 +71,14 @@
             <div class="card blog__slide text-center">
               <div class="blog__slide__img">
                 {% if post.image_url %}
-                  <img class="card-img rounded-0" src="{{post.image_url}}" alt="">
+                  <img class="card-img rounded-0" src="{{ post.image_url }}" alt="">
                 {% else %}
                   <img class="card-img rounded-0" src="{% static "img/banner/blog.png" %}" alt="">
                 {% endif %}
               </div>
               <div class="blog__slide__content">
-                <h3><a href="#">{{post.title}}</a></h3>
-                <p>{{post.published_at}}</p>
+                <h3><a href="#">{{ post.title }}</a></h3>
+                <p>{{ post.published_at }}</p>
               </div>
             </div>
           </div>
@@ -98,19 +98,19 @@
             <div class="single-recent-blog-post">
               <div class="thumb">
                 {% if post.image_url %}
-                  <img class="img-fluid" src="{{post.image_url}}" alt="">
+                  <img class="img-fluid" src="{{ post.image_url }}" alt="">
                 {% else %}
                   <img class="img-fluid" src="{% static "img/banner/blog.png" %}" alt="">
                 {% endif %}
                 <ul class="thumb-info">
-                  <li><a href="#"><i class="ti-user"></i>{{post.author}}</a></li>
-                  <li><a href="#"><i class="ti-notepad"></i>{{post.published_at}}</a></li>
-                  <li><a href="#"><i class="ti-themify-favicon"></i>{{post.comments_amount}} Comments</a></li>
+                  <li><a href="#"><i class="ti-user"></i>{{ post.author }}</a></li>
+                  <li><a href="#"><i class="ti-notepad"></i>{{ post.published_at }}</a></li>
+                  <li><a href="#"><i class="ti-themify-favicon"></i>{{ post.comments_amount }} Comments</a></li>
                 </ul>
               </div>
               <div class="details mt-20">
-                <h3>{{post.title}}</h3>
-                <p>{{post.text}}</p>
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.text|truncatechars:200 }}</p>
                 <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
               </div>
             </div>
