@@ -5,7 +5,6 @@ from django.conf import settings
 
 from blog import views
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('post/<slug:slug>', views.post_detail, name='post_detail'),
